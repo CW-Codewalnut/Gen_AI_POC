@@ -15,3 +15,6 @@ services:
         sync: false
       - key: ANTHROPIC_MODEL
         value: claude-sonnet-5-5
+      # low | medium | high — low is fastest for live demos
+      - key: ANTHROPIC_EFFORT
+        value: low
