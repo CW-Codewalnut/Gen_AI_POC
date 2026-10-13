@@ -23,7 +23,20 @@ Open http://localhost:5173 and pick a suggestion from the chat.
 
 The API key only lives on the server. The browser never sees it.
 
-Production: `npm run build && npm start` serves the built app and the API from port 8787.
+Production: `npm run build && npm start` serves the built app and the API from one Node process (port `PORT`, default 8787).
+
+### Deploy to Render
+
+Create a **Web Service** (not a Static Site), or use the included `render.yaml` blueprint:
+
+| Setting | Value |
+|---|---|
+| Build command | `npm install; npm run build` |
+| Start command | `npm start` |
+| Health check path | `/api/health` |
+| Environment | `ANTHROPIC_API_KEY` (secret), `NODE_VERSION=22` |
+
+`.env` is not deployed; set the key in Render's environment settings. Render provides `PORT` automatically.
 
 ## Configuration (`.env`)
 
