@@ -1,5 +1,5 @@
 import { tool } from 'ai'
-import { uiSpecSchema, type RenderUIOutput } from '../../../shared/ui-spec.ts'
+import { uiSpecSchema, type RenderUIOutput } from '../../../shared/ui-spec.js'
 
 /**
  * Method 3 — JSON UI spec. Claude composes an interface from the catalog in

@@ -25,3 +25,6 @@ dist-ssr
 
 # Secrets
 .env
+
+# Vercel
+.vercel

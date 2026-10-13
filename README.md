@@ -38,6 +38,19 @@ Create a **Web Service** (not a Static Site), or use the included `render.yaml` 
 
 `.env` is not deployed; set the key in Render's environment settings. Render provides `PORT` automatically.
 
+### Deploy to Vercel
+
+Vercel serves `dist/` as static files and runs the API as a Vercel Function (`api/index.ts`), which wraps the same Hono app (`server/app.ts`) that Render runs. Settings live in `vercel.json`:
+
+| Setting | Value |
+|---|---|
+| Framework preset | Vite (from `vercel.json`) |
+| Build command | `npm run build` |
+| Output directory | `dist` |
+| Environment | `ANTHROPIC_API_KEY` (secret); optional `ANTHROPIC_MODEL`, `ANTHROPIC_EFFORT` |
+
+`vercel.json` rewrites `/api/*` to the function and allows up to 60 s per generation (`maxDuration`).
+
 ## Configuration (`.env`)
 
 | Variable | Default | Notes |

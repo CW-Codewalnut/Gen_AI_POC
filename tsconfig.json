@@ -8,6 +8,14 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    // Read by Vercel when it compiles api/ (the project references above are
+    // what `tsc -b` uses locally).
+    "target": "es2023",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "types": ["node"],
+    "strict": true,
+    "skipLibCheck": true
   }
 }

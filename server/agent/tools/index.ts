@@ -1,5 +1,5 @@
 import type { ToolSet } from 'ai'
-import { renderUI } from './render-ui.ts'
+import { renderUI } from './render-ui.js'
 
 /**
  * Tool registry.
