@@ -1,7 +1,7 @@
 # Render Blueprint — one Node web service serving the built app and the /api routes.
 services:
   - type: web
-    name: genui-studio
+    name: cw-genui-studio
     runtime: node
     plan: free
     buildCommand: npm install; npm run build
